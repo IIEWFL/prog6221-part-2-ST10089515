@@ -57,6 +57,37 @@ The Recipe App can be enhanced with the following features in the future:
 ## Contribution
 
 Contributions to the Recipe App are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+## UPDATES FROM PART 1
+1. Added a new property `Calories` to the `Ingredient` class:
+   - The `Calories` property represents the number of calories in the ingredient.
+
+2. Added a new method `GetTotalCalories()` to the `Recipe` class:
+   - The `GetTotalCalories()` method calculates the total calories of all the ingredients in the recipe.
+   - It uses LINQ's `Sum()` method to calculate the sum of calories for all ingredients.
+
+3. Updated the `Recipe` class constructor:
+   - The constructor now takes a `name` parameter and initializes the `Name` property of the recipe.
+
+4. Changed the `Ingredients` and `Steps` properties in the `Recipe` class to use `List<T>` instead of arrays:
+   - This allows for dynamic resizing of the lists as ingredients and steps are added to the recipe.
+
+5. Replaced the `EnterRecipeDetails()` method:
+   - The updated `EnterRecipeDetails()` method prompts the user to enter the name, ingredient count, and step count for the recipe.
+   - It creates a new `Recipe` instance with the provided name.
+   - It then prompts the user to enter details for each ingredient and step, and adds them to the recipe using the `Add()` method of the `Ingredients` and `Steps` lists.
+
+6. Updated the `DisplayRecipeDetails()` method:
+   - The method now displays the total calories of the selected recipe using the `GetTotalCalories()` method.
+   - It also displays a warning message if the total calories exceed 300.
+
+7. Updated the `ScaleRecipe()` method:
+   - The method now uses a scaling factor entered by the user to adjust the quantity of each ingredient in the selected recipe.
+
+8. Updated the `ResetQuantities()` method:
+   - The method sets the quantity of each ingredient in the selected recipe to the original quantity obtained from the `GetOriginalQuantity()` method.
+
+9. Added a new `ClearAllData()` method:
+   - The `ClearAllData()` method clears the `recipes` list, removing all recipe data.
 
 ---
 
