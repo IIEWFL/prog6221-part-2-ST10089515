@@ -463,6 +463,9 @@ namespace RecipeApp
 
 
 {
+
+
+    public delegate void StringDelegate(string warning);
     class Ingredient
     {
         public string Name { get; set; } // Name of the ingredient
@@ -574,18 +577,26 @@ namespace RecipeApp
 
             for (int i = 0; i < ingredientCount; i++)
             {
-                Console.WriteLine($"Ingredient #{i + 1}:");
-                Console.Write("Name: ");
+                Console.WriteLine($"Enter Ingredient(s) #{i + 1}:");
+                Console.Write("Enter Name: ");
                 string ingredientName = Console.ReadLine(); // Read the name of the ingredient from the user
-                Console.Write("Quantity: ");
+                Console.Write("Enter Quantity: ");
                 double quantity = double.Parse(Console.ReadLine()); // Read the quantity of the ingredient from the user
-                Console.Write("Unit of Measurement: ");
+                Console.Write("Enter Unit of Measurement: ");
                 string unit = Console.ReadLine(); // Read the unit of measurement for the ingredient from the user
-                Console.Write("Calories: ");
+                Console.Write("Enter Calories: ");
+
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine("What are calories in food?\r\nA calorie is a measurement, just like a teaspoon or an inch. Calories are the amount of energy released when your body breaks down (digests and absorbs) food. The more calories a food has, the more energy it can provide to your body");
                 int calories = int.Parse(Console.ReadLine()); // Read the number of calories in the ingredient from the user
+                if (calories > 300)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
 
+                    StringDelegate warning = ToUpperCase;
+                    warning("WARNING! THE CALORIES AMOUNT HAS EXCEEDED THE MAX CALORIES(300) TRY ALTERNATIVES THAT WILL DECREASE THIS AMMOUNT. ");
+                    //Console.WriteLine("WARNING! THE CALORIES AMOUNT HAS EXCEEDED THE MAX CALORIES(300) TRY ALTERNATIVES THAT WILL DECREASE THIS AMMOUNT. ");
+                }
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
 
                 Console.Write("Food Group:\r\n1)Fruit and vegetables.\r\n2)Starchy food.\r\n3)Dairy.\r\n4)Protein.\r\n5)Fat. ");
@@ -607,7 +618,11 @@ namespace RecipeApp
 
                 if (calories > 300)
                 {
-                    Console.WriteLine("WARNING! THE CALORIES AMOUNT HAS EXCEEDED THE MAX CALORIES(300) TRY ALTERNATIVES THAT WILL DECREASE THIS AMMOUNT. ");
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+
+                    StringDelegate warning = ToUpperCase;
+                    warning("WARNING! THE CALORIES AMOUNT HAS EXCEEDED THE MAX CALORIES(300) TRY ALTERNATIVES THAT WILL DECREASE THIS AMMOUNT. ");
+                    //Console.WriteLine("WARNING! THE CALORIES AMOUNT HAS EXCEEDED THE MAX CALORIES(300) TRY ALTERNATIVES THAT WILL DECREASE THIS AMMOUNT. ");
                 }
             }
 
@@ -766,6 +781,7 @@ namespace RecipeApp
             recipes.Clear(); // Clear all recipes from the list
             Console.WriteLine("All data cleared.");
         }
+        static void ToUpperCase(string warning) => Console.WriteLine(warning);
 
     }
 
