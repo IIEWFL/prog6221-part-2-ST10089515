@@ -582,12 +582,16 @@ namespace RecipeApp
                 Console.Write("Unit of Measurement: ");
                 string unit = Console.ReadLine(); // Read the unit of measurement for the ingredient from the user
                 Console.Write("Calories: ");
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("What are calories in food?\r\nA calorie is a measurement, just like a teaspoon or an inch. Calories are the amount of energy released when your body breaks down (digests and absorbs) food. The more calories a food has, the more energy it can provide to your body");
                 int calories = int.Parse(Console.ReadLine()); // Read the number of calories in the ingredient from the user
 
-               
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+
                 Console.Write("Food Group:\r\n1)Fruit and vegetables.\r\n2)Starchy food.\r\n3)Dairy.\r\n4)Protein.\r\n5)Fat. ");
                 Console.WriteLine("Food group mean where on the food pyramid does the food fall under and can be categoried in accordance to the groups mentioned above.");
                 string foodGroup = Console.ReadLine(); // Read the food group to which the ingredient belongs from the user
+                Console.ForegroundColor = ConsoleColor.Red;
 
 
                 Ingredient ingredient = new Ingredient
