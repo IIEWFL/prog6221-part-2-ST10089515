@@ -558,7 +558,7 @@ namespace RecipeApp
                 Console.WriteLine();
             }
         }
-
+           
         static void EnterRecipeDetails()
         {
             Console.Write("Enter the name of the recipe: ");
@@ -585,8 +585,10 @@ namespace RecipeApp
                 int calories = int.Parse(Console.ReadLine()); // Read the number of calories in the ingredient from the user
 
                
-                Console.Write("Food Group: ");
+                Console.Write("Food Group:\r\n1)Fruit and vegetables.\r\n2)Starchy food.\r\n3)Dairy.\r\n4)Protein.\r\n5)Fat. ");
+                Console.WriteLine("Food group mean where on the food pyramid does the food fall under and can be categoried in accordance to the groups mentioned above.");
                 string foodGroup = Console.ReadLine(); // Read the food group to which the ingredient belongs from the user
+
 
                 Ingredient ingredient = new Ingredient
                 {
