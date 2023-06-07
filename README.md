@@ -58,10 +58,6 @@ The Recipe App can be enhanced with the following features in the future:
 
 Contributions to the Recipe App are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 
-## License
-
-The Recipe App is open-source and released under the [MIT License](https://opensource.org/licenses/MIT).
-
 ---
 
 Thank you for using the Recipe App! We hope it simplifies your recipe management and cooking experience.
