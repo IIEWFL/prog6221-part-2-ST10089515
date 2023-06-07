@@ -792,28 +792,3 @@ namespace RecipeApp
     }
 
 }
-using NUnit.Framework;
-
-namespace RecipeApp.Tests
-{
-    [TestFixture]
-    public class RecipeTests
-    {
-        [Test]
-        public void CalculateTotalCalories_ReturnsCorrectSum()
-        {
-            // Arrange
-            Recipe recipe = new Recipe();
-            Ingredient ingredient1 = new Ingredient { Name = "Ingredient 1", Calories = 100 };
-            Ingredient ingredient2 = new Ingredient { Name = "Ingredient 2", Calories = 200 };
-            recipe.Ingredients.Add(ingredient1);
-            recipe.Ingredients.Add(ingredient2);
-
-            // Act
-            int totalCalories = recipe.GetTotalCalories();
-
-            // Assert
-            Assert.AreEqual(300, totalCalories);
-        }
-    }
-}

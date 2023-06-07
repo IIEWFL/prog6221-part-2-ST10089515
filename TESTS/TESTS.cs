@@ -9,16 +9,16 @@ namespace POE1FINAL.TESTS
     internal class TESTS
     {
 
-        public void CalculateTotalCalories_ReturnsCorrectSum()
+        public void CalculateTotalCalories_ReturnsCorrectSum_ReturnString()
         { 
         try {
 
                 int num = 100;
+                TESTS test = new TESTS();
 
-            
-            
-            
-            
+               
+
+
             } catch   (Exception ex) {
 
 
