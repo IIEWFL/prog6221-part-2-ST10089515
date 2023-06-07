@@ -671,6 +671,7 @@ namespace RecipeApp
 
             Console.WriteLine("Select a recipe to display:");
             for (int i = 0; i < recipes.Count; i++)
+                
             {
                 Console.WriteLine($"{i + 1}. {recipes[i].Name}"); // Display the index and name of each recipe
             }
@@ -694,6 +695,11 @@ namespace RecipeApp
                 Console.WriteLine($"Total Calories: {selectedRecipe.GetTotalCalories()}");
                 if (selectedRecipe.GetTotalCalories() > 300)
                 {
+                 
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+
+                        
+                    
                     Console.WriteLine("Warning: The total calories of this recipe exceed 300.");
                 }
             }
