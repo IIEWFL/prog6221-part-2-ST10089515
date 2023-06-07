@@ -466,7 +466,7 @@ namespace RecipeApp
 
 
     public delegate void StringDelegate(string warning);
-    class Ingredient
+    public class Ingredient
     {
         public string Name { get; set; } // Name of the ingredient
         public double Quantity { get; set; } // Quantity of the ingredient
@@ -475,12 +475,12 @@ namespace RecipeApp
         public string FoodGroup { get; set; } // Food group to which the ingredient belongs
     }
 
-    class RecipeStep
+   public  class RecipeStep
     {
         public string Description { get; set; } // Description of a recipe step
     }
 
-    class Recipe
+    public class Recipe 
     {
         public string Name { get; set; } // Name of the recipe
         public List<Ingredient> Ingredients { get; set; } // List of ingredients in the recipe
@@ -499,7 +499,7 @@ namespace RecipeApp
         }
     }
 
-    class Program
+    public class Program
     {
         static List<Recipe> recipes = new List<Recipe>(); // List to store recipes
 
