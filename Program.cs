@@ -792,7 +792,7 @@ namespace RecipeApp
     }
 
 }
-/**using NUnit.Framework;
+using NUnit.Framework;
 
 namespace RecipeApp.Tests
 {
@@ -816,4 +816,4 @@ namespace RecipeApp.Tests
             Assert.AreEqual(300, totalCalories);
         }
     }
-}**/
+}
