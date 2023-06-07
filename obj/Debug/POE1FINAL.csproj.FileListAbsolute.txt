@@ -1,0 +1,8 @@
+C:\Users\fmotj\source\repos\POE1FINAL\bin\Debug\POE1FINAL.exe.config
+C:\Users\fmotj\source\repos\POE1FINAL\bin\Debug\POE1FINAL.exe
+C:\Users\fmotj\source\repos\POE1FINAL\bin\Debug\POE1FINAL.pdb
+C:\Users\fmotj\source\repos\POE1FINAL\obj\Debug\POE1FINAL.csproj.AssemblyReference.cache
+C:\Users\fmotj\source\repos\POE1FINAL\obj\Debug\POE1FINAL.csproj.SuggestedBindingRedirects.cache
+C:\Users\fmotj\source\repos\POE1FINAL\obj\Debug\POE1FINAL.csproj.CoreCompileInputs.cache
+C:\Users\fmotj\source\repos\POE1FINAL\obj\Debug\POE1FINAL.exe
+C:\Users\fmotj\source\repos\POE1FINAL\obj\Debug\POE1FINAL.pdb
